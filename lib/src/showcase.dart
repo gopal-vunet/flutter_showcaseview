@@ -258,7 +258,8 @@ class _ShowcaseState extends State<Showcase> with TickerProviderStateMixin {
               onTap: _nextIfAny,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
+                //TODO: kToolbarHeight must be added dynamically
+                height: MediaQuery.of(context).size.height - kToolbarHeight,
                 child: CustomPaint(
                   painter: ShapePainter(
                       opacity: widget.overlayOpacity,
